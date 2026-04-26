@@ -1,0 +1,129 @@
+:root {
+  background-color: #202124;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.browser-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── タブバー ── */
+.tab-bar {
+  height: 40px;
+  background: #292a2d;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 8px;
+  gap: 2px;
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #3c3f41;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  min-width: 120px;
+  max-width: 200px;
+  color: #9aa0a6;
+  font-size: 12px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.tab-active {
+  background: #35363a;
+  color: #e8eaed;
+}
+
+.tab-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tab-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 50%;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.tab-close:hover { background: rgba(255,255,255,0.2); }
+
+.tab-new {
+  background: none;
+  border: none;
+  color: #9aa0a6;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 8px;
+  border-radius: 50%;
+  align-self: center;
+  margin-left: 4px;
+  line-height: 1;
+}
+.tab-new:hover { background: rgba(255,255,255,0.1); }
+
+/* ── アドレスバー ── */
+.chrome-toolbar {
+  height: 60px;
+  background-color: #35363a;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 15px;
+  border-bottom: 1px solid #202124;
+  flex-shrink: 0;
+}
+
+.nav-controls { display: flex; gap: 8px; }
+
+.nav-icon {
+  background: none;
+  border: none;
+  color: #e8eaed;
+  font-size: 16px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-icon:hover { background-color: rgba(255,255,255,0.1); }
+
+.omni-box { flex: 1; }
+
+.url-input {
+  width: 100%;
+  height: 34px;
+  background-color: #202124;
+  border: none;
+  border-radius: 20px;
+  padding: 0 20px;
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+.url-input:focus  { box-shadow: 0 0 0 2px #8ab4f8; }
+.url-input:disabled { opacity: 0.4; }
+
+/* ── Webviewエリア ── */
+.view-viewport { flex: 1; }
